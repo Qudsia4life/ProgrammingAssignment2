@@ -4,9 +4,9 @@
 
 ## This function creates a special "matrix" object that can cache its inverse.
 
-makeCacheMatrix <-                                     ##define the arguments with default mode of "matrix"
-  inv<-NULL                                            ##initialize inv as NULL;will hold value of matrix inverse
-  set<-function(y){                                    ##define the set function to assign new
+makeCacheMatrix(x=matrix()){                             ##define the arguments with default mode of "matrix"
+    inv<-NULL                                            ##initialize inv as NULL;will hold value of matrix inverse
+    set<-function(y){                                    ##define the set function to assign new
     
          x<<-y                                         ##value of matrix in parent environment
        inv<<-NULL                                      ##if there is a new matrix, reset inv NULL
